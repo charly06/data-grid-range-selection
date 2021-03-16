@@ -1,0 +1,6 @@
+table {
+  cursor: pointer;
+}
+th, td {
+  min-width: 50px;
+}

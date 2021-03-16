@@ -1,0 +1,11 @@
+mat-grid-tile {
+  background: white;
+}
+
+.dts-select-container:not(.dts-custom) .dts-select-item.selected {
+  background: lightgreen;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}

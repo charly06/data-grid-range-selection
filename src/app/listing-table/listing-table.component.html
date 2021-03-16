@@ -1,0 +1,15 @@
+<dts-select-container
+  #mainListing
+  [(selectedItems)]="selectedListingOptions">
+
+  <mat-grid-list cols="6" rowHeight="50px">
+
+    <mat-grid-tile
+      *ngFor="let listingOption of listingOptions"
+      [dtsSelectItem]="listingOption">
+      <span>{{listingOption.region.toString()}}-{{listingOption.sapLayoutModuleId}}</span>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+</dts-select-container>

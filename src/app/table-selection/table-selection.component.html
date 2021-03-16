@@ -1,0 +1,10 @@
+<mat-table *ngIf="dataSource" [dataSource]="dataSource" class="mat-elevation-z8" appRangeSelection (rangeChanged)="onRangeChanged($event)">
+
+  <ng-container *ngFor="let disCol of columnNames" matColumnDef="{{disCol}}">
+    <mat-header-cell *matHeaderCellDef>{{disCol}}</mat-header-cell>
+    <mat-cell *matCellDef="let object">{{object[disCol]}}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnNames;" [id]="row.Baustein"></mat-row>
+</mat-table>
