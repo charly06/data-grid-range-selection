@@ -13,3 +13,17 @@
   </mat-grid-list>
 
 </dts-select-container>
+
+<mat-divider style="margin: 30px 0;"></mat-divider>
+
+<mat-grid-list cols="6" rowHeight="50px">
+
+  <mat-grid-tile
+    *ngFor="let listingOption of listingOptions"
+    (click)="selectedListingOptionsSimpleToggle.toggle(listingOption)"
+    [class.state--selected]="selectedListingOptionsSimpleToggle.isSelected(listingOption)"
+    class="listing-option noselect">
+    <span>{{listingOption.region.toString()}}-{{listingOption.sapLayoutModuleId}}</span>
+  </mat-grid-tile>
+
+</mat-grid-list>

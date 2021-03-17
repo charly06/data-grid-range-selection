@@ -45,8 +45,7 @@ export class ListingTableComponent implements OnInit {
 
   listingOptions: Listing[] = LISTING_OPTIONS;
   selectedListingOptions: Listing[] = [];
-  deselectedListingOptions: Listing[] = [];
-  selection = new SelectionModel<Listing>(true, [], true);
+  selectedListingOptionsSimpleToggle = new SelectionModel<Listing>(true, [], true);
 
   constructor() { }
 
